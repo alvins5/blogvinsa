@@ -47,18 +47,22 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-deploy:
+  deploy:
     needs: build 
     runs-on: self-hosted  # <--- Pastikan ini self-hosted
 
     steps:
       - name: Deploy to service host
         run: |
+          # 1. Tarik image baru
           sudo docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
 
+          # 2. Hapus yang lama (Pakai || true agar tidak error saat deploy pertama)
           sudo docker stop blogvinsa || true
           sudo docker rm blogvinsa || true
 
+          # 3. Jalankan yang baru
           sudo docker run -d --name blogvinsa -p 8080:80 --restart always ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
 
+          # 4. Bersih-bersih file sampah
           sudo docker image prune -f
