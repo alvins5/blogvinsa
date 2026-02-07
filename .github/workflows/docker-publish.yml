@@ -47,3 +47,13 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+  deploy:
+    needs: build 
+    runs-on: home-service-host
+
+    steps:
+      - name: Deploy to service host
+        run: |
+          sudo docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          sudo docker run -d --name blogvinsa -p 8080:80 --restart always ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          sudo docker image prune -f

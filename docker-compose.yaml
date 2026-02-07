@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: blog_vinsa_container
+    container_name: blogvinsa
     ports:
       - "8080:80"
     restart: always
