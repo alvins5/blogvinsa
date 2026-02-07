@@ -7,7 +7,7 @@ social:
   - name: "GitHub"
     url: "https://github.com/alvins5"
   - name: "LinkedIn"
-    url: "https://linkedin.com/in/username"
+    url: "https://linkedin.com/in/alvinsa-isnanda-putra"
 summary: >
   Vocational high school student interested in networking, DevOps, cloud computing,
   and Linux administration. This portfolio is built with Fuwari (Astro).

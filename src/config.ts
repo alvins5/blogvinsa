@@ -8,7 +8,7 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "Vinsa",
+	title: "VINSA",
 	subtitle: "Blog Site",
 	lang: "en", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
@@ -52,13 +52,6 @@ export const profileConfig: ProfileConfig = {
 	name: "Alvinsa Isnanda Putra",
 	bio: "IT enthusiast with interests in networking, DevOps, and cloud computing.",
 	links: [
-		{
-			name: "Twitter",
-			icon: "fa6-brands:twitter", // Visit https://icones.js.org/ for icon codes
-			// You will need to install the corresponding icon set if it's not already included
-			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://twitter.com",
-		},
 		{
 			name: "Linkedin",
 			icon: "fa6-brands:linkedin",
