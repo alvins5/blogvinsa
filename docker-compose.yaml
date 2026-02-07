@@ -1,20 +1,9 @@
 services:
   blog:
-    # Bagian ini memerintahkan Compose untuk mem-build dari folder saat ini (.)
-    # menggunakan file bernama 'Dockerfile'
     build:
       context: .
       dockerfile: Dockerfile
-    
-    # Memberi nama image hasil build di lokal agar mudah dicari
-    
     container_name: blog_vinsa_container
-    
-    # Mapping Port
-    # Format: "Port-Host:Port-Container"
-    # Kita map port 8080 laptop ke port 80 Nginx di dalam container
     ports:
       - "8080:80"
-    
-    # Container akan restart otomatis jika crash atau setelah reboot
     restart: always
