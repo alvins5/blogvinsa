@@ -33,10 +33,12 @@ jobs:
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v5
-        type: raw
-        value: latest
-        with:
-          images: ${{ env.IMAGE_NAME }}
+        with: 
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest, enable={{is_default_branch}}
+            type=sha,format=short
+          
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
