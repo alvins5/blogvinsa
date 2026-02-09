@@ -16,20 +16,20 @@ A student at SMK N 2 Depok Sleman focused on networking, DevOps, cloud computing
 
 Networking
 - Manage traffic and configurations using MikroTik (queues, firewall, NAT).
-- Experience with routing and switching; able to configure Cisco devices (IOS).
+- Experience with routing and switching able to configure Cisco devices (IOS).
 - Implement VLANs, VPNs, and perform basic network troubleshooting.
 
 DevOps & Cloud
 - Deploy web applications and other services on VMs managed in Proxmox.
 - Manage VM lifecycle, perform snapshots/backups, and automate simple deployments.
-- Studied basic AWS and GCP concepts — familiar with VMs, storage, and managed services.
-- Started diving into containerization (Docker) and planning to learn container orchestration (Kubernetes) and IaC (Terraform/Ansible).
+- Studied basic AWS and GCP concepts familiar with VMs, storage, and managed services.
+- Started diving into containerization (Docker) and planning to learn container orchestration (Kubernetes) and IaC (Opentofu/Ansible).
 
 Tools & Technologies (summary)
 - Networking: MikroTik, Cisco IOS, VLAN, VPN
 - Virtualization & Cloud: Proxmox, AWS (basic), GCP (basic)
 - DevOps & Containers: Docker, GitHub Actions, CI/CD
-- Automation & IaC: Bash, Ansible, Terraform (beginner)
+- Automation & IaC: Bash, Ansible, OpenTofu (beginner)
 - OS & other: Linux (administration), Git, Astro (Fuwari)
 
 Contact

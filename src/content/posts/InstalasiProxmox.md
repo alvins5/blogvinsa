@@ -7,6 +7,4 @@ category: Cloud
 draft: false
 ---
 
-test1
-test2
-test3
+COMING SOON
